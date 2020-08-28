@@ -16,7 +16,6 @@ class ImageController extends Controller
 
         $image = collect(Storage::allFiles('/images'))->random();
         $cropped = Image::make(storage_path('app/') . $image)->fit($width, $height);
-        // dd($cropped);
 
         return $cropped->response('jpeg');
     }
