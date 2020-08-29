@@ -8,7 +8,7 @@ use Intervention\Image\Facades\Image;
 
 class ImageController extends Controller
 {
-    public function __invoke($width, $height = null)
+    public function __invoke(Request $request, $width, $height = null)
     {
         if (!$height) {
             $height = $width;
@@ -16,7 +16,8 @@ class ImageController extends Controller
 
         $image = collect(Storage::allFiles('/images'))->random();
         $cropped = Image::make(storage_path('app/') . $image)->fit($width, $height);
+        $extension = ($request->extension && in_array($request->extension, ['png', 'jpeg', 'jpg'])) ? $request->extension : 'jpeg';
 
-        return $cropped->response('jpeg');
+        return $cropped->response($extension);
     }
 }
