@@ -21,5 +21,5 @@
 
     <p class="my-6">Example</p>
 
-    <img src="{{ route('image', ['width' => 1000, 'height' => 800]) }}" alt="example image" class="rounded-lg">
+    <img src="{{ route('image', ['width' => 1000, 'height' => 800]) }}" alt="example image" class="rounded-lg" width="1000" height="800">
 @endsection
