@@ -1,5 +1,7 @@
 <?php
 
+// these routes are disabled in the RouteServiceProvider;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
