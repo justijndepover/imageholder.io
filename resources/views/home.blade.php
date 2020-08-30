@@ -19,14 +19,7 @@
         <span class="text-green-300">alt</span><span>=</span><span class="text-yellow-300">""</span><span class="text-blue-300">&gt;</span>
         <br>
         <br>
-        <span class="text-gray-600">// Its also possible to specify the extension (png, jpg, jpeg)</span>
-        <br>
-        <span class="text-blue-300">&lt;img</span>
-        <span class="text-green-300">src</span><span>=</span><span class="text-yellow-300">"{{ route('image', ['width' => 500, 'height' => 1000, 'extension' => 'png']) }}"</span>
-        <span class="text-green-300">alt</span><span>=</span><span class="text-yellow-300">""</span><span class="text-blue-300">&gt;</span>
-        <br>
-        <br>
-        <span class="text-gray-600">// Or specify a specific image</span>
+        <span class="text-gray-600">// you can also specify a specific image</span>
         <br>
         <span class="text-blue-300">&lt;img</span>
         <span class="text-green-300">src</span><span>=</span><span class="text-yellow-300">"{{ route('image', ['width' => 500, 'height' => 1000, 'image' => '1']) }}"</span>
