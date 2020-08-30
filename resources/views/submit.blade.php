@@ -21,7 +21,7 @@
                 <span class="text-sm text-red-400">{{ $message }}</span>
             @enderror
         </div>
-        <div class="mb-2">
+        <div class="mb-6">
             <input type="text" class="bg-gray-100 w-full py-2 px-4 outline-none rounded-lg text-sm @error('website') border border-red-400 @enderror" name="website" placeholder="Website">
             @error ('website')
                 <span class="text-sm text-red-400">{{ $message }}</span>
