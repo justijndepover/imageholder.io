@@ -12,6 +12,10 @@ class ImageController extends Controller
     {
         $height = $height ?? $width;
 
+        if (!is_numeric($width) || !is_numeric($height) || $width > 1500 || $height > 1500) {
+            abort(422);
+        }
+
         // This can be improved
         if ($request->image && (int) $request->image < 6) {
             $name = "image-{$request->image}.jpg";
