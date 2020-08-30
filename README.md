@@ -1,5 +1,5 @@
-# IMG-API
-This repo contains the source code for <url>
+# imageholder.io
+This repo contains the source code for https://imageholder.io
 
 ## usage
 ```html
