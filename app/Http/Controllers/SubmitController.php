@@ -17,6 +17,6 @@ class SubmitController extends Controller
             'name' => 'required|string|max:255',
             'website' => 'required|string|max:255',
         ]);
-        return redirect()->route('submit');
+        return redirect()->route('submit')->with('message', 'Your submission was successful.');
     }
 }

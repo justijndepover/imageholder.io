@@ -6,6 +6,12 @@
     <p>Each image is carefully selected.</p>
     <p>We will review your submission and if the image is sufficient, we'll add it to the list!</p>
 
+    @if (Session::has('message'))
+        <div class="bg-green-200 text-green-700 p-4 text-sm rounded-lg mt-12">
+            {{ Session::get('message') }}
+        </div>
+    @endif
+
     <form action="{{ route('submit') }}" method="POST" class="mt-12">
         @csrf
 
