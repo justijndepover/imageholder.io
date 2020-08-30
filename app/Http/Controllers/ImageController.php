@@ -14,14 +14,22 @@ class ImageController extends Controller
 
         // This can be improved
         if ($request->image && (int) $request->image < 6) {
-            $image = "images/image-{$request->image}.jpg";
+            $name = "image-{$request->image}.jpg";
         } else {
-            $image = collect(Storage::allFiles('/images'))->random();
+            $random = rand(1, 5);
+            $name = "image-{$random}.jpg";
         }
 
-        $cropped = Image::make(storage_path('app/') . $image)->fit($width, $height);
-        $extension = ($request->extension && in_array($request->extension, ['png', 'jpeg', 'jpg'])) ? $request->extension : 'jpeg';
+        $path = "images/{$width}x{$height}/";
 
-        return $cropped->response($extension);
+        if (!Storage::exists($path . $name)) {
+            Storage::makeDirectory($path);
+
+            Image::make(storage_path('app/images/') . $name)
+                ->fit($width, $height)
+                ->save(storage_path('app/') . $path . $name);
+        }
+
+        return response()->file(storage_path('app/') . $path . $name);
     }
 }
