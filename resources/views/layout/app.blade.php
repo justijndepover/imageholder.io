@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>img-api.com</title>
+        <title>{{ config('app.name') }}</title>
 
         <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     </head>
@@ -14,10 +14,11 @@
     <body class="antialiased font-sans bg-white text-gray-900 min-h-screen">
         <header class="border-t-4 border-indigo-600 py-24">
             <div class="w-full max-w-3xl mx-auto px-6 flex items-center justify-between">
-                <a href="{{ route('home') }}" class="block w-8 text-gray-300 hover:text-indigo-600 transition duration-300">
-                    <svg class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" fill="currentColor">
-                        <path d="M150,5.1L4.6,203.7L150,294.9l145.4-91.2L150,5.1z M150,272.3L32.1,198.4l31.7-43.3l27.8,17.4l-13.8,18.8 l36.5,22.9v-72.7V86.2L150,37.4V272.3z M185.7,141.5l36.5,49.8l-36.5,22.9V141.5z"/>
+                <a href="{{ route('home') }}" class="flex items-center text-gray-300 hover:text-indigo-600 transition duration-300">
+                    <svg class="w-8 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
                     </svg>
+                    <span class="font-bold">{{ config('app.name') }}</span>
                 </a>
 
                 @if (Request::is('/'))
@@ -46,8 +47,11 @@
         <footer class="w-full max-w-3xl mx-auto px-6">
             <div class="py-12 text-gray-500 flex items-center justify-between">
                 <div>
-                    <span>A product by</span>
-                    <a href="#" target="_blank" class="font-bold hover:text-indigo-600">Justijn Depover</a>
+                    <a href="https://justijn.netlify.app" target="_blank" class="block w-6 text-gray-300 hover:text-indigo-600 transition duration-300">
+                        <svg class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" fill="currentColor">
+                            <path d="M150,5.1L4.6,203.7L150,294.9l145.4-91.2L150,5.1z M150,272.3L32.1,198.4l31.7-43.3l27.8,17.4l-13.8,18.8 l36.5,22.9v-72.7V86.2L150,37.4V272.3z M185.7,141.5l36.5,49.8l-36.5,22.9V141.5z"/>
+                        </svg>
+                    </a>
                 </div>
 
                 <div>
