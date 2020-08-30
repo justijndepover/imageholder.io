@@ -56,7 +56,7 @@
 
                 <div>
                     <span>Found a bug?</span>
-                    <a href="https://github.com/justijndepover/img-api" target="_blank" class="font-bold hover:text-indigo-600">Open issue</a>
+                    <a href="https://github.com/justijndepover/imageholder.io" target="_blank" class="font-bold hover:text-indigo-600">Open issue</a>
                 </div>
             </div>
         </footer>
