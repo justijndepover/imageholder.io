@@ -10,9 +10,7 @@ class ImageController extends Controller
 {
     public function __invoke(Request $request, $width, $height = null)
     {
-        if (!$height) {
-            $height = $width;
-        }
+        $height = $height ?? $width;
 
         // This can be improved
         if ($request->image && (int) $request->image < 6) {
