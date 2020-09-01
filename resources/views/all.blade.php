@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <h1 class="text-6xl font-black leading-none mb-2">All our images.</h1>
+    <h1 class="text-4xl sm:text-6xl font-black leading-none mb-2">All our images.</h1>
     <a href="{{ route('submit') }}" class="text-gray-300 hover:text-indigo-600 font-bold mb-10 inline-block">
         <div class="flex items-center">
             <svg class="w-4 mr-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

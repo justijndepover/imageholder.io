@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <h1 class="text-6xl font-black leading-none mb-12">The solution for all your placeholder needs.</h1>
+    <h1 class="text-4xl sm:text-6xl font-black leading-none mb-12">The solution for all your placeholder needs.</h1>
     <p><a href="{{ route('home') }}" class="hover:text-indigo-600 font-bold">imageholder.io</a> is an easy to use image placeholder tool.</p>
 
     <code class="text-sm bg-gray-800 w-full block mt-6 px-4 py-6 text-white rounded-lg">

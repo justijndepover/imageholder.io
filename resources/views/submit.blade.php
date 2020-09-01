@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <h1 class="text-6xl font-black leading-none mb-12">Submit a new image.</h1>
+    <h1 class="text-4xl sm:text-6xl font-black leading-none mb-12">Submit a new image.</h1>
 
     <p>Each image is carefully selected.</p>
     <p>We will review your submission and if the image is sufficient, we'll add it to the list!</p>

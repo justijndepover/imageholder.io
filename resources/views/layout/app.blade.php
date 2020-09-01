@@ -12,9 +12,9 @@
     </head>
 
     <body class="antialiased font-sans bg-white text-gray-900 min-h-screen">
-        <header class="border-t-4 border-indigo-600 py-24">
-            <div class="w-full max-w-3xl mx-auto px-6 flex items-center justify-between">
-                <a href="{{ route('home') }}" class="flex items-center text-gray-300 hover:text-indigo-600 transition duration-300">
+        <header class="border-t-4 border-indigo-600 py-12 sm:py-24">
+            <div class="w-full max-w-3xl mx-auto px-6 sm:flex sm:flex-row sm:items-center sm:justify-between">
+                <a href="{{ route('home') }}" class="flex items-center text-gray-300 hover:text-indigo-600 transition duration-300 mb-3 sm:mb-0">
                     <svg class="w-8 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd" />
                     </svg>
@@ -22,14 +22,14 @@
                 </a>
 
                 @if (Request::is('/'))
-                <a href="{{ route('all') }}" class="block bg-gray-300 hover:bg-indigo-600 text-gray-800 hover:text-indigo-100 py-1 px-4 rounded-full text-sm tracking-wide transition duration-300 flex items-center justify-between">
+                <a href="{{ route('all') }}" class="bg-gray-300 hover:bg-indigo-600 text-gray-800 hover:text-indigo-100 py-1 px-4 rounded-full text-sm tracking-wide transition duration-300 inline-block sm:flex sm:items-center sm:justify-between">
                     <span class="mr-2">See all our images</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 inline">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                 </a>
                 @else
-                <a href="{{ route('home') }}" class="block bg-gray-300 hover:bg-indigo-600 text-gray-800 hover:text-indigo-100 py-1 px-4 rounded-full text-sm tracking-wide transition duration-300 flex items-center justify-between">
+                <a href="{{ route('home') }}" class="bg-gray-300 hover:bg-indigo-600 text-gray-800 hover:text-indigo-100 py-1 px-4 rounded-full text-sm tracking-wide transition duration-300 inline-block sm:flex sm:items-center sm:justify-between">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 inline">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                     </svg>
