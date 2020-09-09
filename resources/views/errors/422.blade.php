@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
     <h1 class="text-6xl font-black leading-none mb-12">422.</h1>

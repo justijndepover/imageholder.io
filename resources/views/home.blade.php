@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('content')
     <h1 class="text-4xl sm:text-6xl font-black leading-none mb-12">The solution for all your placeholder needs.</h1>
