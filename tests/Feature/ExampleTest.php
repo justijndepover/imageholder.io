@@ -36,6 +36,9 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/400/500');
 
-        $this->assertTrue(false);
+        $size = getimagesize($response->getFile());
+
+        $this->assertEquals('400', $size[0]);
+        $this->assertEquals('500', $size[1]);
     }
 }
