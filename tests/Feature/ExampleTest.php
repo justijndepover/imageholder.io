@@ -32,6 +32,17 @@ class ExampleTest extends TestCase
     }
 
     /** @test */
+    public function it_should_return_a_correct_square_image_format()
+    {
+        $response = $this->get('/400');
+
+        $size = getimagesize($response->getFile());
+
+        $this->assertEquals('400', $size[0]);
+        $this->assertEquals('400', $size[1]);
+    }
+
+    /** @test */
     public function it_should_return_a_correct_image_format()
     {
         $response = $this->get('/400/500');
