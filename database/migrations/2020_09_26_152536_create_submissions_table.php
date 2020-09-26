@@ -18,6 +18,7 @@ class CreateSubmissionsTable extends Migration
             $table->string('name');
             $table->string('website');
             $table->string('image');
+            $table->boolean('accepted')->default(false);
             $table->timestamps();
             $table->softDeletes();
         });

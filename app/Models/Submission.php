@@ -11,5 +11,5 @@ class Submission extends Model
     use HasFactory;
     use SoftDeletes;
 
-    public $fillable = ['name', 'website', 'image'];
+    public $fillable = ['name', 'website', 'image', 'accepted'];
 }
