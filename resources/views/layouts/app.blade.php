@@ -45,7 +45,7 @@
         </main>
 
         <footer class="w-full max-w-3xl mx-auto px-6">
-            <div class="py-12 text-gray-500 flex items-center justify-between">
+            <div class="py-12 text-gray-500 flex items-top justify-between">
                 <div>
                     <a href="https://justijn.netlify.app" target="_blank" class="block w-6 text-gray-300 hover:text-indigo-600 transition duration-300">
                         <svg class="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 300" fill="currentColor">
@@ -57,6 +57,18 @@
                 <div>
                     <span>Found a bug?</span>
                     <a href="https://github.com/justijndepover/imageholder.io" target="_blank" class="font-bold hover:text-indigo-600">Open issue</a>
+
+                    <div class="text-right text-gray-300 mt-2">
+                        @auth
+                            <a href="{{ route('submissions') }}" class="block">Submissions</a>
+                            <a href="#" class="block" onclick="document.getElementById('logout').submit()">Logout</a>
+                            <form id="logout" class="hidden" action="{{ route('logout') }}" method="post">
+                                @csrf
+                            </form>
+                        @else
+                            <a href="{{ route('login') }}" class="block">Login</a>
+                        @endauth
+                    </div>
                 </div>
             </div>
         </footer>
