@@ -12,7 +12,7 @@
         </div>
     @endif
 
-    <form action="{{ route('submit') }}" method="POST" class="mt-12">
+    <form action="{{ route('submit') }}" method="POST" class="mt-12" enctype="multipart/form-data">
         @csrf
 
         <div class="mb-2">
