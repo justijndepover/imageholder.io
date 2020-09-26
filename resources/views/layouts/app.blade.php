@@ -40,7 +40,7 @@
             </div>
         </header>
 
-        <main class="w-full max-w-3xl mx-auto px-6">
+        <main id="app" class="w-full max-w-3xl mx-auto px-6">
             @yield('content')
         </main>
 

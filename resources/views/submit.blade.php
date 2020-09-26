@@ -16,14 +16,22 @@
         @csrf
 
         <div class="mb-2">
-            <input type="text" class="bg-gray-100 w-full py-2 px-4 outline-none rounded-lg text-sm @error('name') border border-red-400 @enderror" name="name" placeholder="Your name">
+            <input type="text" class="bg-gray-100 w-full py-2 px-4 outline-none rounded-lg text-sm @error('name') border border-red-400 @enderror" name="name" placeholder="Your name" value="{{ old('name') }}">
             @error ('name')
                 <span class="text-sm text-red-400">{{ $message }}</span>
             @enderror
         </div>
-        <div class="mb-6">
-            <input type="text" class="bg-gray-100 w-full py-2 px-4 outline-none rounded-lg text-sm @error('website') border border-red-400 @enderror" name="website" placeholder="Website">
+
+        <div class="mb-2">
+            <input type="text" class="bg-gray-100 w-full py-2 px-4 outline-none rounded-lg text-sm @error('website') border border-red-400 @enderror" name="website" placeholder="Website" value="{{ old('website') }}">
             @error ('website')
+                <span class="text-sm text-red-400">{{ $message }}</span>
+            @enderror
+        </div>
+
+        <div class="mb-6">
+            <input-file name="image" id="image" class="@error('image') border border-red-400 @enderror"></input-file>
+            @error ('image')
                 <span class="text-sm text-red-400">{{ $message }}</span>
             @enderror
         </div>
